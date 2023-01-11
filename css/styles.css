@@ -2156,6 +2156,19 @@ progress {
     -webkit-overflow-scrolling: touch;
   }
 }
+.formgroup{
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	background-size: 10.5%;
+	transition: background-image 0.7s;
+	-webkit-transition: background-image 0.7s;
+	-moz-transition: background-image 0.7s;
+	-o-transition: background-image 0.7s;
+	width: 10px;
+	padding-top: 2px;
+}
+
+
 .form-label {
   margin-bottom: 0.5rem;
 }

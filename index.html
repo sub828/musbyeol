@@ -1,3 +1,13 @@
+<script>
+    function doAction() {
+        const textarea = document.getElementById('message')
+        if (textarea.value=='')
+            alert('캐릭터명을 입력해주세요.');
+        else
+            alert('준비중입니다.');
+    }  
+</script>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -32,29 +42,30 @@
                     <!-- To make this form functional, sign up at-->
                     <!-- https://startbootstrap.com/solution/contact-forms-->
                     <!-- to get an API token!-->
-                    <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-                        <!-- Email address input-->
-                        <!-- <div class="row input-group-newsletter"> -->
-                        <div class="formgroup" id="message-form">
-                            <textarea id="message" name="message" placeholder="캐릭터명 입력하기..."></textarea>
+                    <form id="contactForm" data-sb-form-api-token="API_TOKEN">                        
+                        <div class="row input-group-newsletter">
+                            <div class="col" id="message-form">
+                                <textarea rows="3" id="message" name="message" placeholder="캐릭터명 붙여넣기..."></textarea>
+                            </div>
+                            <div class="col-auto">
+                                <button class="btn btn-primary abled" id="submitButton" type="button" onclick=doAction()>검색하기</button>
+                            </div>
                         </div>
+                        <!-- Email address input-->
                             <!-- <div class="col"><input class="form-control" id="email" type="email" placeholder="캐릭터명 입력하기..." aria-label="Enter email address..." data-sb-validations="required,email" /></div>
                             <div class="col-auto"><button class="btn btn-primary disabled" id="submitButton" type="submit">검색하기</button></div> -->
-                        <!-- </div> -->
-                        <!-- <div class="invalid-feedback mt-2" data-sb-feedback="email:required">An email is required.</div>
-                        <div class="invalid-feedback mt-2" data-sb-feedback="email:email">Email is not valid.</div> -->
+                        <!-- <div class="invalid-feedback mt-2" data-sb-feedback="email:email">Email is not valid.</div> -->
                         <!-- Submit success message-->
                         <!---->
                         <!-- This is what your users will see when the form-->
                         <!-- has successfully submitted-->
-                        <div class="d-none" id="submitSuccessMessage">
+                        <!-- <div class="d-none" id="submitSuccessMessage">
                             <div class="text-center mb-3 mt-2">
                                 <div class="fw-bolder">Form submission successful!</div>
                                 To activate this form, sign up at
                                 <br />
-                                <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
                             </div>
-                        </div>
+                        </div> -->
                         <!-- Submit error message-->
                         <!---->
                         <!-- This is what your users will see when there is-->

@@ -1,0 +1,13 @@
+<script>
+    const receivedData = location.href.split('?')[1];    
+    console.log(decodeURI(receivedData));
+
+    var   blk   = document.getElementById("result");
+    blk.innerHTML  =  receivedData; 
+</script>
+
+<html>
+<body>
+    <div id = "result"></div>
+</body>
+</html>
